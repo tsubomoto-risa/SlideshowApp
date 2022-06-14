@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		EE4F12B1285881E500EC79F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4F12AF285881E500EC79F9 /* Main.storyboard */; };
 		EE4F12B3285881E600EC79F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE4F12B2285881E600EC79F9 /* Assets.xcassets */; };
 		EE4F12B6285881E600EC79F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4F12B4285881E600EC79F9 /* LaunchScreen.storyboard */; };
+		EE4F12BE2858855800EC79F9 /* ImageZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4F12BD2858855800EC79F9 /* ImageZoomViewController.swift */; };
+		EE4F12C02858A93E00EC79F9 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4F12BF2858A93E00EC79F9 /* ImageDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		EE4F12B2285881E600EC79F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE4F12B5285881E600EC79F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE4F12B7285881E600EC79F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE4F12BD2858855800EC79F9 /* ImageZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageZoomViewController.swift; sourceTree = "<group>"; };
+		EE4F12BF2858A93E00EC79F9 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				EE4F12A9285881E500EC79F9 /* AppDelegate.swift */,
 				EE4F12AB285881E500EC79F9 /* SceneDelegate.swift */,
 				EE4F12AD285881E500EC79F9 /* ViewController.swift */,
+				EE4F12BF2858A93E00EC79F9 /* ImageDetailViewController.swift */,
+				EE4F12BD2858855800EC79F9 /* ImageZoomViewController.swift */,
 				EE4F12AF285881E500EC79F9 /* Main.storyboard */,
 				EE4F12B2285881E600EC79F9 /* Assets.xcassets */,
 				EE4F12B4285881E600EC79F9 /* LaunchScreen.storyboard */,
@@ -103,7 +109,7 @@
 				};
 			};
 			buildConfigurationList = EE4F12A1285881E500EC79F9 /* Build configuration list for PBXProject "SlideshowApp" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -141,6 +147,8 @@
 				EE4F12AE285881E500EC79F9 /* ViewController.swift in Sources */,
 				EE4F12AA285881E500EC79F9 /* AppDelegate.swift in Sources */,
 				EE4F12AC285881E500EC79F9 /* SceneDelegate.swift in Sources */,
+				EE4F12BE2858855800EC79F9 /* ImageZoomViewController.swift in Sources */,
+				EE4F12C02858A93E00EC79F9 /* ImageDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
