@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var startButton: UIButton!
     
+    @IBOutlet weak var prevButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
     var timer: Timer!
     var nowIndex: Int = 0
     // スライドショーさせる画像の配列
@@ -65,6 +68,10 @@ class ViewController: UIViewController {
             
             //ボタンテキスト変更
             self.startButton.setTitle("停止", for: .normal)
+            
+            //進む・戻るボタン無効化
+            self.nextButton.isEnabled = false
+            self.prevButton.isEnabled = false
         } else {
             //停止ボタンタップ時
             
@@ -74,11 +81,29 @@ class ViewController: UIViewController {
             
             //ボタンテキスト変更
             self.startButton.setTitle("再生", for: .normal)
+            
+            //進む・戻るボタン有効化
+            self.nextButton.isEnabled = true
+            self.prevButton.isEnabled = true
         }
     }
     
     //画像タップ
     @IBAction func imageTapped(_ sender: Any) {
+        //スライドショー停止
+        if self.timer != nil {
+            //タイマー停止・削除
+            self.timer.invalidate()
+            self.timer = nil
+            
+            //ボタンテキスト変更
+            self.startButton.setTitle("再生", for: .normal)
+            
+            //進む・戻るボタン有効化
+            self.nextButton.isEnabled = true
+            self.prevButton.isEnabled = true
+        }
+        
         performSegue(withIdentifier: "imageDetail", sender: nil)
     }
     
@@ -95,10 +120,14 @@ class ViewController: UIViewController {
         if isNext {
             self.nowIndex += 1
         } else {
-            self.nowIndex += self.imageUrlArray.count - 1
+            self.nowIndex -= 1
         }
         
-        self.nowIndex %= self.imageUrlArray.count
+        if self.nowIndex < 0 {
+            self.nowIndex = self.imageUrlArray.count - 1
+        } else if self.nowIndex == self.imageUrlArray.count {
+            self.nowIndex = 0
+        }
         
         //セット
         self.imageView.image = fetchImage(url: self.imageUrlArray[nowIndex])
